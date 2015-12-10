@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>PDX Creative Coders</title>
+
+		<meta name="description" content="PDX Creative Coders">
+		<meta name="author" content="">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<style>
+		#currentTime {
+			font-weight:300;
+			font-size:0.8em;
+			position:absolute;
+			right:10px;
+			top:10px;
+			opacity:0.5;
+		}
+
+		#wifiDetails{
+			font-weight:300;
+			font-size:0.8em;
+			position:absolute;
+			left:10px;
+			top:10px;
+			opacity:0.5;
+		}
+
+		.reveal .slides > section.show3D {
+			padding-top:450px;
+		}
+
+		#wifiDetails .lbl{
+			width:120px;
+			display:inline-block;
+		}
+		</style>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section class="show3D">
+					<h4>December 2015 Show + Tell</h4>
+				</section>
+
+				<section>
+					<h2>Welcome!</h2>
+					<ul>
+						<li class="fragment">Introductions</li>
+						<li class="fragment">Wifi</li>
+						<li class="fragment">Food / Drinks</li>
+						<li class="fragment">Bathrooms</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Upcoming</h2>
+				</section>
+
+				<section>
+					<h4>Event Name</h4>
+					<p>January 7th at Location</p>
+					<p>http://www.eventurl.com</p>
+					<hr>
+					<h4>Event Name</h4>
+					<p>January 7th at Location</p>
+					<p>http://www.eventurl.com</p>
+				</section>
+
+				<section>
+					<!-- logo for sponsor -->
+					<!-- <img src="images/logo.png" border="0"/> -->
+					<p>drinks, snacks, and space generously provided<br> by Some Organization</p>
+					<hr>
+					<p>Some kind of message from the sponsor<p>
+					<p>More message or sponsor contact info</p>
+				</section>
+
+				<section>
+					<h2>Say Hello</h2>
+				</section>
+
+				<section>
+					<h2>Schedule</h2>
+					<ul>
+						<li>7:00 - Presentation</li>
+						<li>7:45 - Title 1</li>
+						<li>7:50 - Title 2</li>
+						<li>9:00 - Goodnight!</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Presentations!</h2>
+				</section>
+
+				<section>
+					<h2>Title</h2>
+					<p>presentation description text</p>
+					<p>by Presenter Name</p>
+				</section>
+
+				<section>
+					<h2>Show + Tell</h2>
+					<p>this is where we all share our rad projects</p>
+					<p>by Everybody</p>
+				</section>
+
+				<section class="show3D">
+					<h3>Thanks for Showing Up!</h3>
+					<p>www.meetup.com/PDX-Creative-Coders</p>
+					<hr>
+					<p>please make your way to the exits in<br>a calm and orderly manner</p>
+				</section>
+
+			</div>
+
+			<div id="overlays">
+				<label id="currentTime"></label>
+				<label id="wifiDetails">WiFi SSID<br>WiFi Password</label> 
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="js/presentation.js"></script>
+		
+		<script src="js/THREE.min.js"></script>
+		<script src="js/FontUtils.js"></script>
+		<script src="js/TextGeometry.js"></script>
+
+		<script src="js/Titillium Web_Bold.js"></script>
+
+		<script>
+		Reveal.initialize({
+			controls: false,
+			progress: false,
+			history: true,
+			center: true,
+			transition: 'slide'
+		});
+
+		Reveal.addEventListener( 'slidechanged', function( event ) {
+    	updateState();
+		} );
+
+		Reveal.addEventListener( 'ready', function( event ) {
+			initThreeJS();
+		} );
+		</script>
+
+	</body>
+</html>
